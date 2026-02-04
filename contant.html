@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Bootstrap Task</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        .contact-icon { font-size: 2rem; }
+        .form-control:focus { border-color: #0d6efd; box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); }
+    </style>
+</head>
+<body>
+    <!-- Same Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-bootstrap"></i> BootstrapTask
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-primary text-white py-5 mt-5">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold">Contact Us</h1>
+            <p>Have questions? We'd love to hear from you.</p>
+        </div>
+    </header>
+
+    <!-- Contact Form & Info -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Information -->
+                <div class="col-lg-4">
+                    <h3 class="mb-4">Get in Touch</h3>
+                    <div class="d-flex mb-4">
+                        <i class="bi bi-geo-alt contact-icon text-primary me-3"></i>
+                        <div>
+                            <h5>Address</h5>
+                            <p class="text-muted">123 Web Street<br>San Francisco, CA 94107</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <i class="bi bi-telephone contact-icon text-primary me-3"></i>
+                        <div>
+                            <h5>Phone</h5>
+                            <p class="text-muted">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <i class="bi bi-envelope contact-icon text-primary me-3"></i>
+                        <div>
+                            <h5>Email</h5>
+                            <p class="text-muted">info@bootstraptask.com</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <i class="bi bi-clock contact-icon text-primary me-3"></i>
+                        <div>
+                            <h5>Business Hours</h5>
+                            <p class="text-muted">Mon-Fri: 9AM - 6PM<br>Sat: 10AM - 4PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form (from Forms Example) -->
+                <div class="col-lg-8">
+                    <h3 class="mb-4">Send us a Message</h3>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="">Choose a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="quote">Request a Quote</option>
+                                    <option value="feedback">Feedback</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Subscribe to our newsletter
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (from Accordion Example) -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            How long does it take to build a website?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Typically, a basic responsive website takes 2-4 weeks depending on complexity and requirements.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Do you offer website maintenance?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we offer monthly and annual maintenance plans to keep your website updated and secure.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Can you work with existing websites?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Absolutely! We can redesign, update, or optimize your existing website.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-5">
+        <div class="container">
+            <h3 class="text-center mb-4">Find Us Here</h3>
+            <div class="ratio ratio-16x9">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.085621100189!2d-122.41941608468163!3d37.77492977975918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c6a4d6a7b%3A0x1c7f6b3b3b3b3b3b!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1629999999999!5m2!1sen!2sus" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Same Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="bi bi-bootstrap"></i> BootstrapTask</h5>
+                    <p>A responsive website built with Bootstrap 5 for learning purposes.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-white-50 text-decoration-none">About</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <a href="#" class="text-white me-3 fs-5"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white me-3 fs-5"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white me-3 fs-5"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white fs-5"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            <hr class="text-white-50">
+            <p class="text-center mb-0">&copy; 2023 Bootstrap Task. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
